@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Quận 5 - Thiên Đường Mỹ Vị</title>
+    <style>
+        /* GIỮ NGUYÊN PHONG CÁCH TỪ TRANG CHỦ */
+        body { 
+            margin: 0; 
+            font-family: "Segoe UI", Arial, sans-serif; 
+            color: #333; 
+            background-color: #ffffff; 
+        }
+
+        header {
+            background-color: #8B0000;
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #008080;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 20px; 
+            letter-spacing: 3px; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin-left: 20px; 
+            font-size: 12px; 
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        nav a:hover { color: #FFD700; }
+
+        /* BANNER TRANG ẨM THỰC */
+        .banner {
+            background-color: #333;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .banner h2 { 
+            font-size: 45px; 
+            letter-spacing: 10px; 
+            font-weight: bold; 
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .banner p { 
+            color: #FFD700; 
+            letter-spacing: 4px; 
+            margin-top: 10px; 
+        }
+
+        .container { 
+            width: 85%; 
+            margin: 50px auto; 
+        }
+
+        .section-header { 
+            text-align: center;
+            color: #8B0000; 
+            letter-spacing: 5px; 
+            margin-bottom: 40px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* GRID HỆ THỐNG MÓN ĂN */
+        .food-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px;
+        }
+
+        .food-card {
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+            background: #fff;
+        }
+
+        .food-card:hover {
+            border-color: #008080;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .food-card img { 
+            width: 100%; 
+            height: 280px; 
+            object-fit: cover; 
+        }
+
+        .food-content {
+            padding: 25px;
+        }
+
+        .food-content h3 { 
+            color: #8B0000; 
+            letter-spacing: 2px; 
+            margin: 0 0 15px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-left: 4px solid #FFD700;
+            padding-left: 10px;
+        }
+
+        .food-content p { 
+            font-size: 14.5px; 
+            color: #555; 
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .location-tag {
+            font-size: 13px;
+            color: #008080;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 50px 8%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            border-top: 5px solid #008080;
+            margin-top: 60px;
+        }
+
+        .footer-left, .footer-right { width: 45%; }
+        footer h4 { color: #FFD700; margin-bottom: 15px; letter-spacing: 2px; text-transform: uppercase;}
+        footer p { margin-bottom: 10px; line-height: 1.8; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DU LỊCH QUẬN 5</h1>
+        <nav>
+            <a href="index.html">Trang Chủ</a>
+            <a href="di-san.html">Di Sản</a>
+            <a href="am-thuc.html" style="color: #FFD700;">Ẩm Thực</a>
+            <a href="cuoc-song.html">Cuộc Sống</a>
+            <a href="lien-he.html">Liên Hệ</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2>THIÊN ĐƯỜNG ẨM THỰC</h2>
+        <p>VỊ NGON TRONG TỪNG GÓC PHỐ</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-header">TINH HOA CHỢ LỚN</h2>
+        
+        <div class="food-grid">
+            <div class="food-card">
+                <img src="vit-quay.jpeg" alt="Vịt quay Quận 5">
+                <div class="food-content">
+                    <h3>Vịt Quay Da Giòn</h3>
+                    <p>Vịt quay là món ăn "linh hồn" của các buổi tiệc gia đình tại Quận 5. Vịt được tẩm ướp thảo mộc kỳ công, quay trong lò cho đến khi da có màu đỏ bánh mật, giòn rụm nhưng thịt bên trong vẫn giữ được độ mềm mọng, thơm lừng mùi gia vị đặc trưng của người Hoa.</p>
+                    <span class="location-tag">📍 Gợi ý: Khu vực Phan Văn Trị, Bùi Hữu Nghĩa.</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="che-tau.jpeg" alt="Chè Tàu">
+                <div class="food-content">
+                    <h3>Chè Tàu (Chè Hoa)</h3>
+                    <p>Khác với các món chè ngọt lịm thông thường, chè Tàu tại đây giống như một bài thuốc bổ thanh mát. Thực khách có thể thưởng thức hột gà trà thơm nhẹ, chè mè đen sánh mịn hay quy linh cao mát lạnh giúp xua tan cái nóng phố thị, rất tốt cho sức khỏe và sắc đẹp.</p>
+                    <span class="location-tag">📍 Gợi ý: Chè Hà Ký, Chè cột điện Châu Văn Liêm.</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="hu-tieu.jpeg" alt="Hủ tiếu mì">
+                <div class="food-content">
+                    <h3>Hủ Tiếu Mì Gia Truyền</h3>
+                    <p>Sợi mì trứng vàng óng được làm thủ công mỗi ngày, ăn kèm với nước dùng trong veo, ngọt thanh từ xương ống. Một tô đầy đủ với xá xíu, tôm tươi và tóp mỡ béo ngậy luôn là lựa chọn hoàn hảo cho bữa sáng hoặc bữa đêm dọc theo những con phố nhộn nhịp.</p>
+                    <span class="location-tag">📍 Gợi ý: Các tiệm mì lâu đời trên đường Nguyễn Trãi.</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="sui-cao.jpeg" alt="Sủi cảo Hà Tôn Quyền">
+                <div class="food-content">
+                    <h3>Sủi Cảo Hà Tôn Quyền</h3>
+                    <p>Dọc con phố Hà Tôn Quyền là hàng chục tiệm sủi cảo danh tiếng. Những viên sủi cảo nhân tôm thịt chắc nịch, lớp vỏ mỏng dai, ăn cùng với cá viên, mực tro hoặc mướp đắng tạo nên hương vị đậm đà không thể tìm thấy ở bất cứ nơi nào khác.</p>
+                    <span class="location-tag">📍 Gợi ý: Phố sủi cảo Hà Tôn Quyền.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <h4>CÔNG TY DU LỊCH QUẬN 5</h4>
+            <p>📍 123 Hải Thượng Lãn Ông, Phường 10, Quận 5, TP.HCM</p>
+            <p>📞 Hotline: 1900 1234 - (028) 3838 3838</p>
+            <p>✉️ Email: lienhe@quan5heritage.vn</p>
+        </div>
+        <div class="footer-right">
+            <h4>THÔNG TIN THÊM</h4>
+            <p>Website được phát triển bởi nhóm dự án học sinh Quận 5 nhằm quảng bá vẻ đẹp di sản địa phương.</p>
+            <p><i style="color: #FFD700;">"Gìn giữ di sản - Kết nối tương lai"</i></p>
+        </div>
+    </footer>
+
+</body>
+</html>
